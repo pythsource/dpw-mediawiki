@@ -7,16 +7,33 @@
     clear: right;
     margin-left: 1em;
     margin-bottom: 0.5em;
+    min-width: 30em;
     max-width: 37em;
     font-size: smaller;
 
-    .title {
+    .title, .infobox-above {
         background: var(--color-primary);
         font-size: large;
+        color: var(--color-base--emphasized);
     }
 
-    .subtitle {
+    .subtitle, .infobox-header {
         background: var(--color-primary);
+        color: var(--color-base--emphasized);
+    }
+
+    .infobox-title {
+        font-size: large;
+        color: var(--color-base--emphasized)
+    }
+
+    .infobox-subheader {
+        text-align: center;
+        background: var(--color-surface-3);
+    }
+
+    .infobox-full-data {
+        text-align: center;
     }
 
     p {
@@ -29,8 +46,17 @@
         margin-left: 1.5em;
     }
 
-    .image {
+    .image, .infobox-image {
         text-align: center;
         border-bottom: 1px solid var(--border-color-base);
+    }
+
+    .infobox-label {
+        background: var(--color-surface-3);
+    }
+
+    .infobox-below {
+        text-align: center;
+        background: var(--color-surface-3);
     }
 }
