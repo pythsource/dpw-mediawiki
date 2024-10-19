@@ -1,0 +1,63 @@
+.citizen-body {
+	.mw-parser-output {
+		a {
+			background-size: 100% 200%;
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, var(--color-primary) 50%);
+			transition: all 0.3s;
+			padding: 0.15em;
+			border-bottom: 2px solid var(--color-primary);
+			display: inline-block;
+		}
+		a:hover {
+			background-position: 0 100%;
+			color: white;
+			transform: skewX(-10deg) scale(1.1);
+		}
+
+		.mw-file-description {
+			background-size: unset;
+			background-image: unset;
+			padding: unset;
+			border-bottom: unset;
+
+			&:hover {
+				transform: unset;
+			}
+		}
+		
+		.mw-editsection {
+			a {
+				background-size: unset;
+				background-image: unset;
+				padding: unset;
+				border-bottom: unset;
+
+				&:hover {
+					transform: unset;
+				}
+			}
+		}
+	}
+
+	a.image {
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: top; // get rid of that weird bottom gap from inline block
+
+		> img {
+			transition: var( --transition-hover );
+			transition-property: transform;
+		}
+
+		// Add affordance to replace magnify icon
+		&:hover:not( .lazy ):not( .new ) {
+			> img {
+				transform: scale( 1.1 );
+			}
+		}
+	}
+
+	.mw-image-border {
+		border: 1px solid var(--border-color-base);
+	}
+}
