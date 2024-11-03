@@ -10,6 +10,13 @@
 	--size-icon: 1.125rem;
 }
 
+.mw-headline {
+	text-transform: uppercase;
+	&::before {
+		content: "// "
+	}
+}
+
 .citizen-sections-enabled {
 	.citizen-section {
 		&-heading {
