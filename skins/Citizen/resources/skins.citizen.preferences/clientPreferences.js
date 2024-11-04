@@ -286,7 +286,7 @@ function makeClientPreference( parent, featureName, config ) {
 	const labelMsg = getFeatureLabelMsg( featureName );
 	// If the user is not debugging messages and no language exists,
 	// exit as its a hidden client preference.
-	// DPW: If its a theme preference then also hide it.
+	// DPW: If it is a theme preference then also hide it.
 	if ( !labelMsg.exists() && mw.config.get( 'wgUserLanguage' ) !== 'qqx' || featureName == 'skin-theme') {
 		return;
 	} else {
