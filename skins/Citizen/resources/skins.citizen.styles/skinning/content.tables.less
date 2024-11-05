@@ -18,6 +18,7 @@
 	border-color: var( --border-color-base );
 	border-radius: var( --border-radius-medium );
 	box-shadow: var( --box-shadow-border );
+	background-color: var(--color-surface-0);
 
 	caption {
 		padding: var( --space-xs ) var( --space-sm );
@@ -43,9 +44,25 @@
 	}
 
 	tr {
+		th,
+		td {
+			border-right-width: 1px;
+			border-left-width: 1px;
+
+			&:first-child {
+				border-left-width: 0;
+			}
+
+			&:last-child {
+				border-right-width: 0;
+			}
+		}
+
 		&:first-of-type {
 			th,
 			td {
+				background-color: var(--color-primary);
+
 				&:first-child {
 					border-left-width: 0;
 					border-top-left-radius: var( --border-radius-medium );
