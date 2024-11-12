@@ -108,3 +108,35 @@
     font-style: italic;
     font-size: smaller;
 }
+
+.textquote-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-style: italic;
+    background: var(--color-surface-0);
+    padding: 1em;
+    border-top: 2px dashed var(--color-primary);
+    border-bottom: 2px dashed var(--color-primary);
+}
+
+.textquote {
+    &::before {
+        content: "„ ";
+        color: var(--color-primary);
+    }
+
+    &::after {
+        content: " ”";
+        color: var(--color-primary);
+    }
+}
+
+.textquote-footer {
+    text-align: end;
+    color: var(--color-subtle);
+
+    &::before {
+        content: "— ";
+    }
+}
