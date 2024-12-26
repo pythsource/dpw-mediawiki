@@ -11,9 +11,8 @@
 
 	&-contents,
 	&-list {
-		margin: 0 0 0 var( --space-xs );
+		margin: 0;
 		list-style: none;
-		border-left: var( --border-width-thick ) solid var( --border-color-base );
 
 		.citizen-toc-link {
 			border-top-left-radius: 0;
@@ -21,13 +20,19 @@
 		}
 	}
 
+	&-sublist {
+		margin-left: 1em;
+	}
+
 	&-link {
 		position: relative;
 		display: flex;
 		gap: var( --space-xs );
 		padding: var( --space-xs );
-		font-weight: var( --font-weight-medium );
-		color: var( --color-emphasized );
+		font-weight: var( --font-weight-semibold );
+		color: white;
+		background: var(--color-surface-1);
+		text-transform: uppercase;
 
 		&.citizen-toc-top {
 			height: 0;
@@ -43,6 +48,7 @@
 		}
 
 		&:hover {
+			color: white;
 			background-color: var( --background-color-button-quiet--hover );
 		}
 
@@ -94,10 +100,10 @@
 
 		&--active {
 			> .citizen-toc-link {
-				color: var( --color-progressive );
+				background-color: var(--color-primary);
 
-				.citizen-toc-indicator {
-					background-color: var( --color-progressive );
+				&::before {
+					content: ">> ";
 				}
 			}
 		}
@@ -217,7 +223,7 @@
 		position: sticky;
 		top: var( --height-sticky-header );
 		max-height: ~'calc( 100vh - var( --height-sticky-header ) )';
-		padding: var( --space-xs ) 0;
+		// padding: var( --space-xs ) 0;
 		overflow-y: auto;
 		overscroll-behavior: contain;
 

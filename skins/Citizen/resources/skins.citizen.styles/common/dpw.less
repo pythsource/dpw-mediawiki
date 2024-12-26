@@ -1,0 +1,19 @@
+// Custom DPW stuff
+.dpw-content-container {
+    display: flex;
+    grid-area: content;
+    border: 2px solid var(--color-primary);
+	background-color: var(--color-surface-1);
+}
+
+.citizen-body {
+    flex-grow: 1;
+}
+
+.citizen-page-sidebar {
+    @media ( min-width: @min-width-breakpoint-desktop ) {
+        min-width: 20em;
+        border-left: 2px solid var(--color-primary);
+        background-color: var(--color-surface-2);
+    }
+}
