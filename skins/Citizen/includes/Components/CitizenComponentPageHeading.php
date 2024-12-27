@@ -144,9 +144,30 @@ class CitizenComponentPageHeading implements CitizenComponent {
 		$titleHtml = $this->titleData;
 		if ( $this->shouldAddParenthesis() ) {
 			// Look for the </span> to ensure that it is the last parenthesis of the title
-			$pattern = '/\s?(\p{Ps}.+\p{Pe})<\/span>/';
-			$replacement = ' <span class="mw-page-title-parenthesis">$1</span></span>';
-			$titleHtml = preg_replace( $pattern, $replacement, $this->titleData );
+			// $pattern = '/\s?(\p{Ps}.+\p{Pe})<\/span>/';
+			// $replacement = ' <span class="mw-page-title-parenthesis">$1</span></span>';
+			// $titleHtml = preg_replace( $pattern, $replacement, $this->titleData );
+
+			// Custom DPW behavior
+			$pattern = '/<span class="mw-page-title-main">(.*?)\((WF|DP1)\)<\/span>/';
+			$titleHtml = preg_replace_callback($pattern, function($matches) {
+				$newContent = $matches[1]; // Remove (WF) or (DP1)
+				if ($matches[2] == 'WF') {
+					$image = '<div id="world-factions" class="mw-title-icon"><img src="/resources/assets/WF_Logo.png" width="45" alt="World Factions logo"/></div>';
+				} elseif ($matches[2] == 'DP1') {
+					$image = '<div id="data-point-s1" class="mw-title-icon"><img src="/resources/assets/dpw_icon.svg" width="45" alt="Data Point Season 1 logo"/></div>';
+				}
+
+				return '<span class="mw-page-title-main">' . $image . $newContent . '</span>';
+			}, $titleHtml);
+
+			if ($titleHtml === $this->titleData) {
+				$titleHtml = preg_replace_callback('/<span class="mw-page-title-main">(.*?)<\/span>/', function($matches) {
+					$defaultImage = '<div id="data-point-s2" class="mw-title-icon"><img src="/resources/assets/dpw_icon.svg" width="45" alt="Data Point Season 2 logo"/></div>';
+					
+					return '<span class="mw-page-title-main">' . $defaultImage . $matches[1] . '</span>';
+				}, $titleHtml);
+			}
 		}
 		return $titleHtml;
 	}

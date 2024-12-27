@@ -5,6 +5,18 @@
 }
 
 .mw-page-title {
+	&-main {
+		display: flex;
+		gap: 0.5em;
+		align-items: center;
+
+		@media ( min-width: @min-width-breakpoint-desktop ) {
+			&::before {
+				content: "// ";
+			}
+		}
+	}
+
 	&-namespace {
 		color: var( --color-base );
 	}
@@ -17,6 +29,5 @@
 	&-parenthesis {
 		font-size: var( --font-size-x-large );
 		color: var( --color-subtle );
-		font-style: italic;
 	}
 }
