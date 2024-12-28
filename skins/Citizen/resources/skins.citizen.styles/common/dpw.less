@@ -57,3 +57,14 @@
         opacity: 100%;
     }
 }
+
+.mw-category {
+    display: grid;
+    
+    @media ( min-width: @min-width-breakpoint-desktop ) {
+        grid-template-columns: auto auto auto;
+    }
+    
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
