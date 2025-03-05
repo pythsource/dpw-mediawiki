@@ -6,7 +6,7 @@
 	clear: both;
 	font-size: var( --font-size-small );
 	color: var( --color-subtle );
-	background-color: var( --color-surface-2 );
+	background-color: ~'hsla( var( --color-primary__h ), var( --color-surface-2__s ), var( --color-surface-2__l ), 0.6 )';
 	direction: ltr;
 
 	&__container {
@@ -90,7 +90,8 @@
 	}
 
 	&-icons {
-		display: flex;
+		// display: flex;
+		display: none; // DPW: Until we get proper stylized icons
 
 		ul {
 			gap: var( --space-xs );
