@@ -11,14 +11,16 @@
 }
 
 .citizen-body-container {
-	display: grid;
+	/* display: grid;
 	grid-template-areas:
- 'header'
+ 		'header'
 		'afterHeader'
 		'content'
 		'footer';
 	// Using auto as min value will cause overflow
-	grid-template-columns: minmax( 0, var( --width-layout ) );
+	grid-template-columns: minmax( 0, var( --width-layout ) ); */
+	display: flex;
+	flex-direction: column;
 	gap: 0 var( --space-xl );
 	justify-content: center;
 	padding: 0 var( --padding-page );
@@ -32,7 +34,7 @@
 	grid-area: header;
 	gap: var( --space-md );
 	align-items: center;
-	padding-top: var( --space-md );
+	// padding-top: var( --space-md );
 	// padding-bottom: var( --space-md );
 }
 
@@ -54,7 +56,7 @@
 }
 
 #siteSub {
-	padding: 0.5em;
+	padding: 0.3em;
 }
 
 .citizen-body {
