@@ -8,13 +8,21 @@
     margin-left: 1em;
     margin-bottom: 0.5em;
     min-width: 26em;
-    max-width: 32em;
+    max-width: 35em;
     font-size: smaller;
+
+    .title, .infobox-above, .subtitle, .infobox-header, .infobox-title, .infobox-subheader {
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0.3em;
+        font-weight: bold;
+    }
 
     .title, .infobox-above {
         background: var(--color-primary);
         font-size: large;
         color: var(--color-base--emphasized);
+        margin-bottom: 0.2em;
     }
 
     .subtitle, .infobox-header {
@@ -60,19 +68,31 @@
     .infobox-label {
         background: var(--color-surface-3);
         border-right: 2px solid var(--color-primary);
+        border-bottom: 1px solid var(--border-color-base);
         color: unset;
+        width: 30%;
+        text-align: center;
+        font-weight: bold;
+        padding: 0.3em;
     }
 
     .infobox-data {
         background: var(--color-surface-1);
         padding: 0.2em;
         border: 1px solid var(--border-color-base);
+        border-top: 0;
         text-align: center;
+        width: 70%;
     }
 
     .infobox-below {
         text-align: center;
         background: var(--color-surface-3);
+    }
+
+    .infobox-row {
+        display: flex;
+        width: 100%;
     }
 }
 
