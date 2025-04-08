@@ -3,9 +3,9 @@
     border: 1px solid var(--border-color-base);
     padding: 0.5em;
     border-top: 5px solid var(--color-primary);
-    float: right;
-    clear: right;
-    margin-left: 1em;
+    float: left;
+    clear: left;
+    margin-right: 1em;
     margin-bottom: 0.5em;
     min-width: 32em;
     max-width: 35em;
@@ -182,16 +182,17 @@
     padding: 0.3em;
     font-size: large;
     color: white;
+    text-transform: uppercase;
 
     p {
         margin: 0;
 
         &::before {
-            content: "// ";
+            content: "/// ";
         }
 
         &::after {
-            content: " //";
+            content: " /// ";
         }
     }
 }
