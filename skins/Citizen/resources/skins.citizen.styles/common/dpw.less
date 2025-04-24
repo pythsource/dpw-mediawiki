@@ -137,3 +137,27 @@ b {
     border-bottom: 2px solid var(--color-primary);
     padding: 0.5em 2em 0.5em 2em;
 }
+
+.timeline-event {
+    background: var(--color-surface-2);
+    padding: 0.3em;
+    padding-left: 0.5em;
+    border: 1px solid var(--border-color-base);
+    border-left: 2px solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+
+    &:hover {
+        background: var(--color-surface-3);
+    }
+}
+
+.timeline-date {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-color-base);
+}
