@@ -22,13 +22,13 @@
 			<div class="dpw-body-column">
 				{{>PageHeader}}
 				<div class="dpw-content-container">
+					{{#toc-enabled}}{{>PageSidebar}}{{/toc-enabled}}
 					<div id="bodyContent" class="citizen-body" aria-labelledby="firstHeading">
 						<div id="contentSub"{{{html-user-language-attributes}}}>{{{html-subtitle}}}</div>
 						{{#html-undelete-link}}<div id="contentSub2">{{{.}}}</div>{{/html-undelete-link}}
 						{{{html-user-message}}}
 						{{{html-body-content--formatted}}}
 					</div>
-					{{#toc-enabled}}{{>PageSidebar}}{{/toc-enabled}}
 				</div>
 			</div>
 		</div>
@@ -37,4 +37,6 @@
 	</main>
 	{{{html-after-content}}}
 	{{#data-footer}}{{>Footer}}{{/data-footer}}
+	<div class="dpw-scan">
+	<div class="dpw-noise">
 </div>
