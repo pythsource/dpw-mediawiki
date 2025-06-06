@@ -12,7 +12,7 @@
 }
 
 .citizen-page-sidebar {
-    @media ( min-width: @min-width-breakpoint-desktop ) {
+    @media (min-width: @min-width-breakpoint-desktop ) {
         min-width: 15em;
         background-color: var(--color-surface-2);
         border-left: 1px solid var(--color-primary);
@@ -30,6 +30,7 @@
     border-style: solid;
     border-color: var(--border-color-base);
     display: flex;
+    display: none;
 }
 
 #world-factions {
@@ -45,7 +46,7 @@
 #data-point-s2 {
     border-color: #9a74ff;
     background: #352857;
-    
+
     img {
         filter: hue-rotate(230deg);
     }
@@ -59,6 +60,7 @@
     0% {
         opacity: 0%;
     }
+
     100% {
         opacity: 100%;
     }
@@ -66,11 +68,11 @@
 
 .mw-category {
     display: grid;
-    
-    @media ( min-width: @min-width-breakpoint-desktop ) {
+
+    @media (min-width: @min-width-breakpoint-desktop ) {
         grid-template-columns: auto auto auto;
     }
-    
+
     grid-template-columns: auto auto;
     gap: 1em;
 }
@@ -132,7 +134,7 @@ b {
 }
 
 .mp-title {
-    font-size: xx-large;    
+    font-size: xx-large;
 }
 
 .mp-title {
@@ -187,8 +189,7 @@ b {
     bottom: -50%;
     width: 200%;
     height: 200vh;
-    background: transparent
-        url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+    background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
     background-repeat: repeat;
     animation: noiseAnimation 0.2s infinite;
     opacity: 0.3;
@@ -200,33 +201,43 @@ b {
     0% {
         transform: translate(0, 0);
     }
+
     10% {
         transform: translate(-5%, -5%);
     }
+
     20% {
         transform: translate(-10%, 5%);
     }
+
     30% {
         transform: translate(5%, -10%);
     }
+
     40% {
         transform: translate(-5%, 15%);
     }
+
     50% {
         transform: translate(-10%, 5%);
     }
+
     60% {
         transform: translate(15%, 0);
     }
+
     70% {
         transform: translate(0, 10%);
     }
+
     80% {
         transform: translate(-15%, 0);
     }
+
     90% {
         transform: translate(10%, 5%);
     }
+
     100% {
         transform: translate(5%, 0);
     }
@@ -242,15 +253,18 @@ b {
     right: 0;
     background:
         linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             rgba(255, 0, 0, 0.06),
             rgba(0, 255, 0, 0.02),
-            rgba(0, 0, 255, 0.06)
-        );
+            rgba(0, 0, 255, 0.06));
     z-index: 2;
     background-size:
         100% 2px,
         3px 100%;
     pointer-events: none;
+}
+
+.ext-templatewizard-templatetitlebar {
+    background-color: var(--color-surface-2);
+    border-bottom: 1px solid var(--border-color-base);
 }
