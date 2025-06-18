@@ -11,14 +11,20 @@
     max-width: 35em;
     font-size: smaller;
 
-    .title, .infobox-above, .subtitle, .infobox-header, .infobox-title, .infobox-subheader {
+    .title,
+    .infobox-above,
+    .subtitle,
+    .infobox-header,
+    .infobox-title,
+    .infobox-subheader {
         text-transform: uppercase;
         text-align: center;
         padding: 0.3em;
         font-weight: bold;
     }
 
-    .title, .infobox-above {
+    .title,
+    .infobox-above {
         background: var(--color-primary);
         font-size: large;
         color: var(--color-base--emphasized);
@@ -33,7 +39,8 @@
         }
     }
 
-    .subtitle, .infobox-header {
+    .subtitle,
+    .infobox-header {
         background: var(--color-primary);
         color: var(--color-base--emphasized);
     }
@@ -63,7 +70,8 @@
         margin-left: 1.5em;
     }
 
-    .image, .infobox-image {
+    .image,
+    .infobox-image {
         text-align: center;
         border-bottom: 1px solid var(--border-color-base);
         padding: 0.5em;
@@ -207,11 +215,13 @@
         border-bottom: unset;
         background-color: unset;
     }
+
     a {
         background-image: unset;
         background-color: unset;
         border-bottom: unset;
     }
+
     a:hover {
         background-position: 0 100%;
         color: white !important;
@@ -241,4 +251,143 @@
     border-top: 1px solid var(--color-primary);
     font-size: 130%;
     transition: all 0.5s;
+}
+
+.dpw-infobox {
+    display: flex;
+    flex-direction: column;
+}
+
+.dpw-infoboxTitle {
+    background: var(--color-primary);
+    font-size: 200%;
+    padding: 0 0.5em 0 0.5em;
+    width: 50%;
+    font-family: "Kode Mono";
+    text-transform: uppercase;
+
+    &::before {
+        content: "// ";
+    }
+}
+
+.dpw-infoboxSubtitle {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 110%;
+    background: var(--color-surface-1);
+}
+
+.dpw-infoboxContents {
+    background: var(--color-surface-2);
+    border: 1px solid var(--border-color-base);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.5em;
+}
+
+.dpw-infoboxRow {
+    display: flex;
+    align-items: start;
+}
+
+.dpw-infoboxPortrait {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    flex-shrink: 0;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid var(--color-primary);
+    margin-right: 1em;
+}
+
+.dpw-infoboxImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.dpw-infoboxPortraitImage {
+    border: 1px solid var(--border-color-base);
+}
+
+.dpw-infoboxPortraitSubtitle {
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+#status-deceased {
+    background: rgba(176, 46, 46, 0.8);
+    color: white;
+}
+
+#status-mia {
+    background: rgba(145, 145, 145, 0.8);
+    color: white;
+}
+
+.dpw-infoboxPortraitStatus {
+    text-align: center;
+    font-size: 130%;
+
+    &:before {
+        content: "[ ";
+    }
+
+    &:after {
+        content: " ]";
+    }
+}
+
+.dpw-infoboxDataGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.dpw-infoboxData {
+    display: flex;
+    align-items: center;
+}
+
+.dpw-infoboxDataHeader,
+.dpw-infoboxDataText {
+    text-align: center;
+    align-content: center;
+    padding: 0.2em 0em 0.2em 0em;
+    font-size: 110%;
+    height: 100%;
+}
+
+.dpw-infoboxDataHeader {
+    text-transform: uppercase;
+    background: var(--color-primary);
+    font-family: "Kode Mono";
+    width: 30%;
+}
+
+.dpw-infoboxDataText {
+    background: var(--color-surface-1);
+    border: 1px solid var(--border-color-base);
+    border-left: 0;
+    width: 70%;
+}
+
+.dpw-infoboxHeader {
+    background: var(--color-primary);
+    font-size: 150%;
+    padding: 0 0.5em 0 0.5em;
+    font-family: "Kode Mono";
+    text-transform: uppercase;
+
+    &::before {
+        content: "// ";
+    }
 }
