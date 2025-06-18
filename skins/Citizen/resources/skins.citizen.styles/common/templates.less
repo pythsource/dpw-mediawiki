@@ -196,3 +196,49 @@
         }
     }
 }
+
+.factions-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+
+    .new {
+        background-image: unset;
+        border-bottom: unset;
+        background-color: unset;
+    }
+    a {
+        background-image: unset;
+        background-color: unset;
+        border-bottom: unset;
+    }
+    a:hover {
+        background-position: 0 100%;
+        color: white !important;
+    }
+}
+
+.factions-category {
+    border: 1px solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &:hover {
+        .factions-text {
+            font-size: 150%;
+        }
+    }
+}
+
+.factions-text {
+    padding: 0 0.5em 0 0.5em;
+    background: var(--color-surface-1);
+    border-top: 1px solid var(--color-primary);
+    font-size: 130%;
+    transition: all 0.5s;
+}

@@ -26,18 +26,38 @@
 		margin: 0;
 		font-size: var( --font-size-x-small );
 		font-weight: var( --font-weight-normal );
-		color: var( --color-subtle );
+		color: white;
+		font-size: 115%;
 		letter-spacing: 0.05em;
 		font-family: "Kode Mono";
+		text-transform: uppercase;
+		background: var(--color-primary);
 	}
 
 	&__content-list {
 		margin: 0;
 		list-style: none;
+		border-left: 1px solid var(--color-primary);
 	}
 
 	.mw-list-item {
 		line-height: var( --line-height-xs );
+		transition: all 0.5s;
+		text-transform: uppercase;
+		border-bottom: 1px solid var(--border-color-base);
+
+		&:hover {
+			font-size: 120%;
+			border: 1px solid var(--color-primary);
+			border-left: 0;
+			background: var(--color-primary);
+
+			a {
+				&::before {
+					content: ">> ";
+				}
+			}
+		}
 
 		a {
 			display: flex;
