@@ -117,13 +117,10 @@
 }
 
 .notif {
-    background: #7c7c7c;
-    color: var(--color-base--emphasized);
+    color: white;
     text-transform: uppercase;
     padding: 0.2em;
     margin-bottom: 0.5em;
-    border: 1px solid #bdbdbd;
-    border-left-width: 0.5em;
     pointer-events: none;
     user-select: none;
 
@@ -132,20 +129,22 @@
     }
 }
 
-.notif-warning {
+#warning-notif {
     background: #aa3325;
-    color: var(--color-base--emphasized);
-    text-transform: uppercase;
-    padding: 0.2em;
-    margin-bottom: 0.5em;
     border: 1px solid #ff5d4b;
     border-left-width: 0.5em;
-    pointer-events: none;
-    user-select: none;
+}
 
-    &::before {
-        content: "// ";
-    }
+#spoilers-notif {
+    background: #928a1f;
+    border: 1px solid #ffed4b;
+    border-left-width: 0.5em;
+}
+
+#note-notif {
+    background: #707070;
+    border: 1px solid #dfdfdf;
+    border-left-width: 0.5em;
 }
 
 .notif-subheader {
@@ -389,5 +388,29 @@
 
     &::before {
         content: "// ";
+    }
+}
+
+/* Template:Spoiler (arknights.wiki.gg) */
+.spoiler {
+	background-color: black;
+	opacity: 1;
+	transition: all 0.3s;
+	cursor: pointer;
+	overflow: auto;
+
+    * {
+        pointer-events: none;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+}
+
+.spoiler.show {
+	background-color: transparent;
+
+    * {
+        pointer-events: unset;
+        opacity: 1;
     }
 }

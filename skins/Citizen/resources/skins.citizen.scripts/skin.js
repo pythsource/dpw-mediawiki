@@ -105,3 +105,18 @@ if ( document.readyState === 'interactive' || document.readyState === 'complete'
 		main( window );
 	} );
 }
+
+/*
+	Data Point Wiki
+    [[Template:Spoiler]]
+    Credits to arknights.wiki.gg
+*/
+$(function () {
+    $('.spoiler')
+        .off('click') // in case this code is loaded twice
+        .on('click', function (e) {
+            $(this).toggleClass('show');
+        }).find('a').on('click', function (e) {
+            e.stopPropagation();
+        });
+});
