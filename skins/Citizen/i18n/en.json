@@ -5,8 +5,8 @@
 			"[https://www.mediawiki.org/wiki/User:Octfx Octfx]"
 		]
 	},
-	"skinname-citizen": "Citizen",
-	"citizen-skin-desc": "A beautiful, usable, responsive MediaWiki skin that makes extensions part of the cohesive experience. Initially created for the [https://starcitizen.tools/ Star Citizen Wiki].",
+	"skinname-citizen": "Data Point Theme",
+	"citizen-skin-desc": "A reskinned version of the [https://www.mediawiki.org/wiki/Skin:Citizen Citizen] theme.",
 	"citizen-prefs-talkpage": "[[mw:Skin_talk:Citizen|Discussion]]",
 	"citizen.css": "/* All CSS here will be loaded for users of the Citizen skin */",
 	"citizen.js": "/* All JavaScript here will be loaded for users of the Citizen skin */",
