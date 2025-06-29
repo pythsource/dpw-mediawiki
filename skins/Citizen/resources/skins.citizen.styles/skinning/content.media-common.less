@@ -67,7 +67,16 @@ figure[ typeof~='mw:File/Frame' ] {
 		caption-side: bottom;
 
 		&:not( :empty ) {
-			margin-top: var( --space-xs );
+			background: var(--color-surface-2);
+			padding: 0.5em;
+			border: 1px solid var(--color-primary);
+  			border-top: 0;
+			color: white;
+			text-transform: uppercase;
+
+			&::before {
+				content: "// "; 
+			}
 		}
 	}
 }
