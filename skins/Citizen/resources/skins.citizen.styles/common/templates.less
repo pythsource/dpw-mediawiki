@@ -1,8 +1,6 @@
 .infobox {
     background: var(--color-surface-2);
     border: 1px solid var(--border-color-base);
-    padding: 0.5em;
-    border-top: 5px solid var(--color-primary);
     float: right;
     clear: right;
     margin-left: 1em;
@@ -107,6 +105,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 
     .infobox-below {
@@ -131,6 +130,14 @@
     margin-bottom: 0.5em;
     pointer-events: none;
     user-select: none;
+    display: flex;
+    gap: 0.3em;
+
+    span {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+    }
 
     &::before {
         content: "// ";
